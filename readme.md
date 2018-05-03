@@ -65,25 +65,25 @@ This does the following:
 You should see output like:
 
 >Generated csv of 1,000,000 fake records in 65 seconds
->891.707088MB currently used
+>>891.707088MB currently used
 
 >Imported csv of 1,000,000 records into an array in 4 seconds
->465.828576MB currently used
+>>465.828576MB currently used
 
 >Opened database successfully
->465.820072MB currently used
+>>465.820072MB currently used
 
 >Table created successfully
->465.820304MB currently used
+>>465.820304MB currently used
 
 >Imported 1,000,000 sql rows in 6 seconds
->522.348176MB currently used
+>>522.348176MB currently used
 
 >Imported zip code data for left joins in 2 seconds
 >>9.964032MB currently used
 
 >Added columns and indexes for left joins in 2 seconds
->9.964088MB currently used
+>>9.964088MB currently used
 
 Then run a server for php via:
 
