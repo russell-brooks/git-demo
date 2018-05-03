@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+	<title>Admixt Question 2</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css" />
+	<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" charset="utf8">
+	$(document).ready(function() {
+	    $('#ajax_table').DataTable( {
+	        "ajax": 'http://localhost:8000/ajax_data.php',
+	        "columns": [
+			    {
+			      "data": "State", // can be null or undefined
+			      "defaultContent": "<i>null</i>"
+			    },
+			    {
+			      "data": "County", // can be null or undefined
+			      "defaultContent": "<i>null</i>"
+			    },
+			    {
+			      "data": "Num People", // can be null or undefined
+			      "defaultContent": 0
+			    }
+			],
+	        "order": [[ 2, "desc" ]]
+		} );
+
+	} );
+	</script>
+
+  <meta name="description" content="Admixt Question 2">
+  <meta name="author" content="Russell Brooks">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<h1>How Many Fake People Do We Have In Each County</h1>
+	<h2>Note: Num People totals less than 1,000,000 because only 43% of the five digit zip code space is used and our fake data spans the whole range.</h2>
+	<h3>You can think of this is how much of the fake data got assigned to an active zip code and what county is that zip code in.</h3>
+	<table id="ajax_table" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>County</th>
+                <th>Num People</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>       	
+                <th>State</th>
+                <th>County</th>
+                <th>Num People</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
